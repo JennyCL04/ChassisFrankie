@@ -7,38 +7,11 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.robot.commands.GetDown;
-import frc.robot.commands.RaiseUp;
-
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-
-  Joystick control;
-
-    public OI(){
-     control = new Joystick(0);
-      JoystickButton rightBumper = new JoystickButton(control, 6);
-      JoystickButton leftBumper = new JoystickButton(control, 5);
-
-      leftBumper.whenPressed(new RaiseUp());
-      rightBumper.whenPressed(new GetDown());
-      
-
-    }
-    
-    public Joystick getControl(){
-
-      return control;
-    }
-
-
-
-
   //// CREATING BUTTONS
   // One type of button is a joystick button which is any button on a
   //// joystick.

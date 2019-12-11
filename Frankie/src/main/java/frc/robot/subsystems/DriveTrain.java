@@ -42,9 +42,7 @@ public class DriveTrain extends Subsystem {
     rightTalon1.set(-rightPower);
     rightTalon2.set(rightPower);
   }
-  public void driveOvni(){
-    
-  }
+ 
 
 
   // Put methods for controlling this subsystem

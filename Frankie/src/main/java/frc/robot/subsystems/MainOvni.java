@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.Robot;
 import frc.robot.RobotMap;
 import frc.robot.commands.GetDown;
 
@@ -33,11 +34,18 @@ public class MainOvni extends Subsystem {
     
    public void RiseUp(){
       solenoid.set(Value.kForward);
-    }
+    } 
 
    public void GetDown(){
-         solenoid.set(Value.kReverse);
+      solenoid.set(Value.kReverse);
     }
+
+    public void DriveOvni(double y){
+      double centralPower = y;
+      ovniMotor.set(centralPower);
+
+    }
+
 
 
        
